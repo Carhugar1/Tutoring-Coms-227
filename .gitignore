@@ -74,3 +74,6 @@ $RECYCLE.BIN/
 
 # Eclipse MetaData
 .metadata/
+.settings/
+.classpath
+.project
