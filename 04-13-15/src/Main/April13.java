@@ -1,6 +1,6 @@
 package Main;
 
-public class April1 {
+public class April13 {
 
 	/* 
 	 * So we are going to do some practice working with such arrays. First off we need to construct
@@ -13,7 +13,19 @@ public class April1 {
 	public static int[][] multiplicationTable( int size ) {
 		// Your code here
 		
-		return null;
+		int a[][] = new int[size][size];
+		
+		for(int i = 0; i < a.length; i++) {
+			
+			for(int j = 0; j < a[i].length; j++) {
+				
+				a[i][j] = ((i + 1) * (j + 1));
+				
+			}
+			
+		}
+		
+		return a;
 	} // end bracket for multiplicationTable()
 	
 	
@@ -27,7 +39,17 @@ public class April1 {
 	// static added
 	public static void print2d( int array[][] ) {
 		// Your code here
-		
+		for(int i = 0; i < array.length; i++) {
+			
+			for(int j = 0; j < array[i].length; j++) {
+				
+				System.out.print(array[i][j] + "\t");
+				
+			}
+			
+			System.out.print("\n");
+			
+		}
 		
 	} // end bracket for print2d()
 	
