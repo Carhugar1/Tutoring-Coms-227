@@ -17,8 +17,22 @@ public class April15 {
 		 * 
 		 */
 		
+		Tutor Branden = new Tutor("Branden", 20);
+		Tutee Dan = new Tutee("Dan", 20);
+		Tutee Kelvin = new Tutee("Kelvin", 19);
 		
+		Pet Snoopie = new Cat("Snoopie", 14, Branden);
 		
+		Branden.addTutee(Dan);
+		Branden.addTutee(Kelvin);
+		
+		System.out.println(Branden.getPets());
+		
+		System.out.println(Branden.getName());
+		
+		System.out.println(Branden.getTutees());
+		
+		System.out.println(Kelvin.getTutors());
 		
 
 	}

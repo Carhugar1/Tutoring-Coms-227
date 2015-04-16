@@ -51,7 +51,17 @@ public class Human implements Animal {
 	 * @return a list of all the pets that this Human owns
 	 */
 	public String getPets() {
-		return pets.toString();
+		return pets.toString(); // will call all the the pets .toString()
+	}
+	
+	/**
+	 * Make the printing of stuff in println() pretty.
+	 * We are overloading the toString method found in the Object class
+	 * For more on the Object class refer to the internet.
+	 */
+	@Override
+	public String toString() {
+		return this.getName();
 	}
 
 }
