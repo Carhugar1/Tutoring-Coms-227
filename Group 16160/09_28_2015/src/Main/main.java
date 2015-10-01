@@ -1,5 +1,7 @@
 package Main;
 
+import java.awt.Rectangle;
+
 public class main {
 
 	public static void main(String[] args) {
@@ -88,6 +90,175 @@ public class main {
 		
 		/* end Problem 3 */
 		
+		
+		
+		/* Problem 4 */
+		
+		System.out.println("\nProblem 2");
+		
+		int a = 42;
+		Rectangle rect = new Rectangle(10, 20, 30, 40); // (x, y, width, height)
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * rect					| >>>>>>>>> 			Rectangle
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	30
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		Rectangle rect2 = new Rectangle(2, 4, 6, 8);
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * rect2				| >>>>>>>>> 			Rectangle
+		 * 						|						x 		2
+		 * 						|						y 		4
+		 * 						|						width	6
+		 * 						|						height	8
+		 * 						|
+		 * rect					| >>>>>>>>> 			Rectangle
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	30
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		int b = a;
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * b					| 42
+		 * 						|
+		 * rect2				| >>>>>>>>> 			Rectangle
+		 * 						|						x 		2
+		 * 						|						y 		4
+		 * 						|						width	6
+		 * 						|						height	8
+		 * 						|
+		 * rect					| >>>>>>>>> 			Rectangle
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	30
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		Rectangle rect3 = rect;
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * rect3				| >>>>		 			--------------------\
+		 * 						|											|
+		 * b					| 42										|
+		 * 						|											|
+		 * rect2				| >>>>					Rectangle			|
+		 * 						|						x 		2			|
+		 * 						|						y 		4			|
+		 * 						|						width	6			|
+		 * 						|						height	8			|
+		 * 						|											|
+		 * rect					| >>>>		 			Rectangle		<---/
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	30
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		rect3.setSize(99, 40); // rect3.setWidth(99);
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * rect3				| >>>>		 			--------------------\
+		 * 						|											|
+		 * b					| 42										|
+		 * 						|											|
+		 * rect2				| >>>>					Rectangle			|
+		 * 						|						x 		2			|
+		 * 						|						y 		4			|
+		 * 						|						width	6			|
+		 * 						|						height	8			|
+		 * 						|											|
+		 * rect					| >>>>		 			Rectangle		<---/
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	99
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		rect2.setLocation(137, 4); // rect2.setX(137);
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * rect3				| >>>>		 			--------------------\
+		 * 						|											|
+		 * b					| 42										|
+		 * 						|											|
+		 * rect2				| >>>>					Rectangle			|
+		 * 						|						x 		137			|
+		 * 						|						y 		4			|
+		 * 						|						width	6			|
+		 * 						|						height	8			|
+		 * 						|											|
+		 * rect					| >>>>		 			Rectangle		<---/
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	99
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		b = b + 5;
+		
+		/**
+		 * Memory 				| Values
+		 * ---------------------+-------------------------------------
+		 * rect3				| >>>>		 			--------------------\
+		 * 						|											|
+		 * b					| 47										|
+		 * 						|											|
+		 * rect2				| >>>>					Rectangle			|
+		 * 						|						x 		137			|
+		 * 						|						y 		4			|
+		 * 						|						width	6			|
+		 * 						|						height	8			|
+		 * 						|											|
+		 * rect					| >>>>		 			Rectangle		<---/
+		 * 						|						x 		10
+		 * 						|						y 		20
+		 * 						|						width	99
+		 * 						|						height	40
+		 * 						|
+		 * a					| 42
+		 * ---------------------+-------------------------------------
+		 */
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(rect.getWidth());
 		
 		
 
