@@ -49,7 +49,7 @@ public class Main {
 	// assertEquals(What the value should be, what the Value actually comes out to be);
 	// assertEquals("Message" , ..... );
 	
-	@Ignore // will ignore the next test case 
+	//@Ignore // will ignore the next test case 
 	@Test
 	public void TestMutiplicationNegative(){
 		assertEquals("-10 * -10", 100, timesItsSelf(-10)); // method bugged
