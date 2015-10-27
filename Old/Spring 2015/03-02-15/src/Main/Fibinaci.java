@@ -22,7 +22,7 @@ public class Fibinaci {
 	
 	public static void main(String args[]) {
 		
-		fibinaciHelper(5);
+		fibinaciHelper(6);
 		
 	}
 	
